@@ -67,8 +67,8 @@ faqNav.textContent = 'FAQ'
 helpNav.textContent = 'Help'
 const nav = document.querySelector('nav');
 
-nav.appendChild(faqNav);
-nav.prepend(helpNav);
+nav.prepend(faqNav);
+nav.appendChild(helpNav);
 
 navigation.forEach( x => x.style.color = 'green')
 faqNav.style.color = 'green';
