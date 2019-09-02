@@ -84,6 +84,7 @@ const ctaButton = document.querySelector('.cta button');
 ctaButton.textContent = siteContent.cta['button']
 
 //Main content selectors
+
 const mainHeaders = document.querySelectorAll('h4');
 mainHeaders[0].textContent = siteContent['main-content']['features-h4']
 mainHeaders[1].textContent = siteContent['main-content']['about-h4']
@@ -91,12 +92,29 @@ mainHeaders[2].textContent = siteContent['main-content']['services-h4']
 mainHeaders[3].textContent = siteContent['main-content']['product-h4']
 mainHeaders[4].textContent = siteContent['main-content']['vision-h4']
 
-const mainContent = document.querySelectorAll('p');
+const mainContent = document.querySelectorAll('.main-content p');
 mainContent[0].textContent = siteContent['main-content']['features-content']
 mainContent[1].textContent = siteContent['main-content']['about-content']
 mainContent[2].textContent = siteContent['main-content']['services-content']
 mainContent[3].textContent = siteContent['main-content']['product-content']
 mainContent[4].textContent = siteContent['main-content']['vision-content']
+
+
+mainContent.forEach( x => {
+  x.style.color = 'dodgerblue'
+  x.style.lineHeight = '1.7'
+  x.style.fontSize = '1.2rem';
+}) ;
+
+mainContent.forEach( x => {
+  x.onmouseover = function(){
+    x.style.color = 'red';
+  }
+  x.onmouseout = function(){
+    x.style.color = 'dodgerblue';
+  }
+});
+
 
 // contact info selectors
 const contactHead = document.querySelector('.contact h4');
