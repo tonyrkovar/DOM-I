@@ -59,6 +59,24 @@ navigation[3].textContent = siteContent.nav['nav-item-4'];
 navigation[4].textContent = siteContent.nav['nav-item-5'];
 navigation[5].textContent = siteContent.nav['nav-item-6'];
 
+
+// appending and prepending to nav
+const faqNav = document.createElement('a');
+const helpNav = document.createElement('a');
+faqNav.textContent = 'FAQ'
+helpNav.textContent = 'Help'
+const nav = document.querySelector('nav');
+
+nav.appendChild(faqNav);
+nav.prepend(helpNav);
+
+navigation.forEach( x => x.style.color = 'green')
+faqNav.style.color = 'green';
+helpNav.style.color = 'green';
+faqNav.setAttribute('href', "#")
+helpNav.setAttribute('href', '#')
+
+
 // selecting cta header
 const ctaText = document.querySelector('h1');
 ctaText.textContent = siteContent.cta['h1'];
